@@ -1,0 +1,95 @@
+
+
+Booking.css
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; background: #FFFFF0; color: #333; }
+
+/* STICKY NAVBAR */
+nav {
+background: #800020;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 30px;
+ position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+nav img { height: 50px; width: auto; background: white; padding: 3px; border-radius: 4px; }
+
+nav ul { list-style: none; display: flex; gap: 25px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+nav ul li a:hover { color: #C9A84C; }
+
+/* HERO SECTION */
+.hero {
+background-image: url('hero-serena.jpg');
+ background-size: cover;
+background-position: center;
+ min-height: 500px;
+width: 100%;
+display: flex;
+ align-items: center;
+ justify-content: center;
+text-align: center;
+}
+
+.hero-text {
+background: rgba(0,0,0,0.55);
+padding: 40px;
+ border-radius: 10px;
+max-width: 700px;
+}
+
+.hero-text h1 { color: white; font-size: 38px; margin-bottom: 20px; }
+
+.btn {
+ display: inline-block;
+background: #C9A84C;
+ color: #800020;
+ font-weight: bold;
+ padding: 14px 30px;
+ text-decoration: none;
+ border-radius: 6px;font-size: 17px;
+}
+
+/* SECTIONS */
+section { padding: 40px 30px; max-width: 1000px; margin: 0 auto; }
+section h2 { color: #800020; text-align: center; margin-bottom: 25px; font-size: 28px; }
+
+/* ROOM CARDS - FLEXBOX 2 PER ROW */
+.rooms-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+.room-card {
+ flex: 1 1 calc(50% - 20px);
+ max-width: calc(50% - 10px);
+ background: white;
+ border: 1px solid #C9A84C;
+ border-top: 6px solid #800020;
+ border-radius: 8px;
+ padding: 22px;box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.room-card h3 { color: #800020; margin-bottom: 8px; }
+.room-card .price { color: #C9A84C; font-weight: bold; font-size: 19px; margin-bottom: 10px; }
+
+/* COMPARISON TABLE */
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { border: 1px solid #ccc; padding: 12px; text-align: center; }
+th { background: #800020; color: white; }
+td:first-child { text-align: left; font-weight: bold; }
+
+.yes { color: green; font-weight: bold; font-size: 18px; }
+.no { color: red; font-weight: bold; font-size: 18px; }
+
+/* BOOKING PLACEHOLDER */
+#booking { text-align: center; background: white; border-radius: 8px; }
+#booking p { margin-bottom: 15px; }
+
+footer { background: #800020; color: white; text-align: center; padding: 15px; }
+
+@media (max-width: 600px) {
+ .room-card { flex: 1 1 100%; max-width: 100%; }
+}
